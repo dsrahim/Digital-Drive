@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #faf7f8;
+    color: #0f172a;
+  }
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Outfit', sans-serif;
+  }
+  .font-mono, code, .tabular-nums {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom premium modern scrollbars for Pink & White theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fdf2f4;
+}
+::-webkit-scrollbar-thumb {
+  background: #fbcfe8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f472b6;
+}
+
+/* Soft delicate glowing cards */
+.pink-glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(244, 114, 182, 0.15);
+  box-shadow: 0 10px 30px -10px rgba(244, 63, 94, 0.07);
+}
+
+.pink-glow {
+  box-shadow: 0 0 25px -5px rgba(236, 72, 153, 0.25);
+}
+
+/* Continuous Infinite Linear Marquee Animation (Zero Jumping / Snapping) */
+@keyframes marquee-linear-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.infinite-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-linear-scroll var(--marquee-speed, 32s) linear infinite;
+  will-change: transform;
+}
+
+.infinite-marquee-track.is-paused,
+.infinite-marquee-container:hover .infinite-marquee-track {
+  animation-play-state: paused;
+}

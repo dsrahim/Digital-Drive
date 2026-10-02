@@ -1,0 +1,6 @@
+{
+  "name": "Digital Drive - Automated Subscription Marketplace",
+  "description": "API-driven digital subscription marketplace with DS Token wallet, real-time supplier sync, and automated credential delivery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
